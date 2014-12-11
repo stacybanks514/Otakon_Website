@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 gem 'foundation-rails'
+group :test do
+  gem 'capybara'
+  gem 'rspec-rails'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
