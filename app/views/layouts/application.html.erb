@@ -19,7 +19,7 @@
     <!-- <div class="contain-to-grid sticky"> -->
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
     <ul class="title-area">
-      <li class="name">
+      <li class="name" id="otakon">
       <h1><a href="#">Otakon</a></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -33,40 +33,58 @@
         <li class="has-dropdown">
           <a href="#">About</a>
           <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
+            <li><a href="#">Mission Statement</a></li>
+            <li><a href="#">Mascots</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Otakon on the Go!</a></li>
+            <li><a href="#">Private Policy</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
           <a href="#">Directions</a>
           <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Hotels</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
           <a href="#">Convention Info</a>
           <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Hours of Operation</a></li>
+            <li><a href="#">Guest</a></li>
+            <li><a href="#">Convention Policies</a></li>
+            <li><a href="#">Special Needs</a></li>
+            <li><a href="#">Newbies guide</a></li>
+            <li><a href="#">Virtual Info Desk</a></li>
+            <li><a href="#">Lost and Found</a></li>
+            <li><a href="#">Help</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
           <a href="#">Community</a>
           <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li><a href="#">Bulletin Board</a></li>
+            <li><a href="#">Cosplay Coordination</a></li>
+            <li><a href="#">Fan Art Showcase</a></li>
+            <li><a href="#">Fan reports and pictures</a></li>
+            <li><a href="#">Social Media</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li><a href="#">Join our team!</a></li>
         <li class="divider"></li>
+        <li><a href="#">Otakon Vegas</a></li>
+        <li class="divider"></li>
       </ul>
       <!-- Right Nav Section -->
       <ul class="right">
+        <li class="divider"></li>
         <li>
           <!-- Begin Devise -->
           <% if admin_signed_in? %>
@@ -83,8 +101,12 @@
     </nav>
   <!-- </div> -->
     <!-- nav bar ends -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    </div>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
