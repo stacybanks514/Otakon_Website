@@ -21,9 +21,20 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    # @article = Article.new(article_params)
+    # @article.save
+    # respond_with(@article)
     @article = Article.new(article_params)
-    @article.save
-    respond_with(@article)
+
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to @article, notice: 'article was successfully created.' }
+        format.json { render :show, status: :created, location: @article }
+      else
+        format.html { render :new }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
@@ -42,6 +53,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params[:article]
+      params.require(:article).permit(:title, :text)
     end
 end
