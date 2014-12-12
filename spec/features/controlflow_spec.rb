@@ -9,7 +9,10 @@ describe "Managing Control Flow" do
 
   it "user can see articles" do
     visit '/'
-    expect(page).to have_content 'Title'
+    within ('#articles') do
+      expect(page).to have_css('th', text: 'Title')
+      expect(page).to have_css('th', text: 'Body')
+    end
   end
 
   # it "user can see articles" do
