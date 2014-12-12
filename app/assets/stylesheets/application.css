@@ -12,4 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+#otakon {
+  background-color: blue
+}
+#top {
+  text-align: center;
+}

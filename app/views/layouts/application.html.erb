@@ -1,31 +1,152 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Otakon</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <!-- <a href="new_admin_registration_path">Sign up</a>
-  <a href="destroy_admin_session_path">Sign out</a> -->
+<html lang="en">
 
-  <% if admin_signed_in? %>
-  Logged in as <strong><%= current_admin.email %></strong>.
-  <%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> 
-  <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <%= link_to "Admin Login", new_admin_session_path, :class => 'navbar-link'  %>
-<% end %>
+    <title>Otakon</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
+  <body>
+    <!-- nav bar begins -->
+    <div class="fixed">
+    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+    <ul class="title-area">
+      <li class="name" id="otakon">
+      <h1><a href="#">Otakon</a></h1>
+      </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
 
-  <!-- Begin Devise -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <!-- End Devise -->
+    <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown">
+            <li><a href="#">Mission Statement</a></li>
+            <li><a href="#">Mascots</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Otakon on the Go!</a></li>
+            <li><a href="#">Private Policy</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Directions</a>
+          <ul class="dropdown">
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Hotels</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Convention Info</a>
+          <ul class="dropdown">
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Hours of Operation</a></li>
+            <li><a href="#">Guest</a></li>
+            <li><a href="#">Convention Policies</a></li>
+            <li><a href="#">Special Needs</a></li>
+            <li><a href="#">Newbies guide</a></li>
+            <li><a href="#">Virtual Info Desk</a></li>
+            <li><a href="#">Lost and Found</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Community</a>
+          <ul class="dropdown">
+            <li><a href="#">Clubs</a></li>
+            <li><a href="#">Bulletin Board</a></li>
+            <li><a href="#">Cosplay Coordination</a></li>
+            <li><a href="#">Fan Art Showcase</a></li>
+            <li><a href="#">Fan reports and pictures</a></li>
+            <li><a href="#">Social Media</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#">Join Our Team!</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Otakon Vegas</a></li>
+        <li class="divider"></li>
+      </ul>
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li>
+          <!-- Begin Devise -->
+          <% if admin_signed_in? %>
+          Logged in as <strong><%= current_admin.email %></strong>
+          <li><%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> </li>
+          <li><%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          <% else %>
+          <%= link_to "Admin Login", new_admin_session_path, :class => 'navbar-link'  %>
+          <% end %>
+          <!-- End Devise -->
+        </li>
+      </ul>
+    </section>
+    </nav>
+  </div>
 
-  <%= yield %>
+    <!-- nav bar ends -->
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    </div>
+    <%= yield %>
 
-</body>
-</html>             
+    <!-- bottom nav bar begins -->
+    <div id="footer">
+      <nav class="top-bar" data-topbar role="navigation">
+
+        <section class="top-bar-section">
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#">Copyrights to Otakon</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Contact</a></li>
+            <li class="divider"></li>
+          </ul>
+
+          <!-- Center Nav Section -->
+          <ul class="text-center" id="top">
+            <li><a href="#">Top of Page</a></li>
+          </ul>
+
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="divider"></li>
+            <li><a href="#">Social Links</a></li>
+
+            <li><a href="#"><i class="page"></i></a></li>
+            <i class="page"></i>
+            <li><i class="page"></i></li>
+            <li><i class="fi-[page]"></i></li>
+            <i class="fi-[page]"></i>
+            <li class="divider"></li>
+            
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <!-- bottom nav bar ends -->
+
+    <%= javascript_include_tag "application" %>
+  </body>
+
+</html>
