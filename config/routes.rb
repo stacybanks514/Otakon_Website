@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+
   devise_for :admins
   get 'welcome/index'
 
