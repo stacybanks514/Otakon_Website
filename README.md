@@ -23,6 +23,7 @@ Coming Soon
 * Ruby 2.1.2
 * Rails 4.1.6
 * PostgreSQL Database
-* capybara
-* foundation-rails 5
+* Capybara and RSPEC
+* Foundation-rails 5
+* Foundation Fonts
 * more to be announced!
