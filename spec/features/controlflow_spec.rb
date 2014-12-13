@@ -4,6 +4,7 @@ describe "Managing Control Flow" do
   # def click_test(x)
   #   find_link('x').visible?
   #   find_link('x').click
+  #   expect(current_path).to eq('/x/about')
   # end
 
   it "user visits root page" do
@@ -19,7 +20,7 @@ describe "Managing Control Flow" do
     end
   end
 
-  it "user clicks on options in nav bar and is lead to appropriate page" do
+  it "HELP - user clicks on options in nav bar and is lead to appropriate page" do
     visit '/'
     within ('#top-nav-bar') do
       find_link('mission').visible?
@@ -50,12 +51,15 @@ describe "Managing Control Flow" do
   it "HELP - user can see and click on social links and be led to appropriate web page" do
     visit '/'
     within ('#footer') do
-      find_link('twitter').visible?
+      find_link('twitter-id').visible?
+      # click_on ('twitter-id')
+      # find_link('twitter-id').click
+      # expect(current_path).not_to eq('/')
       find_link('facebook').visible?
       find_link('pinterest').visible?
       find_link('tumblr').visible?
       find_link('foursquare').visible?
-      # expect(current_url).not_to eq('/')
+      # expect(current_path).not_to eq('/')
     end
   end
 
