@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 gem 'rails_12factor', group: :production
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails', '~> 3.0'
 group :test do
   gem 'capybara'
   gem 'rspec-rails'
