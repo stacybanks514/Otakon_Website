@@ -15,9 +15,11 @@ describe "Managing Control Flow" do
     end
   end
 
-  # it "user can see articles" do
-  #   visit '/'
-  #   expect(page).to have_content 'Title'
-  # end
+    it "user can see social links on footer" do
+      visit '/'
+      within ('#footer') do
+      expect(page).to have_css('li')
+    end
+  end
 
 end
