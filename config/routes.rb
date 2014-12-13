@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   root 'welcome#index'
+  get 'welcome/about'
+  get 'welcome/directions'
+  get 'welcome/convention_info'
+  get 'welcome/community'
+  get 'welcome/join'
+  get 'welcome/contact'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

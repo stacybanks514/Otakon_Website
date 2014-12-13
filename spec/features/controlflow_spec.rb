@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe "Managing Control Flow" do
+  # def click_test(x)
+  #   find_link('x').visible?
+  #   find_link('x').click
+  # end
 
   it "user visits root page" do
     visit '/'
@@ -12,6 +16,27 @@ describe "Managing Control Flow" do
     within ('#articles') do
       expect(page).to have_css('th', text: 'Title')
       expect(page).to have_css('th', text: 'Body')
+    end
+  end
+
+  it "user clicks on options in nav bar and is lead to appropriate page" do
+    visit '/'
+    within ('#top-nav-bar') do
+      find_link('mission').visible?
+      find_link('mission').click
+      expect(current_path).to eq('/welcome/about')
+      find_link('mascots').visible?
+      find_link('mascots').click
+      expect(current_path).to eq('/welcome/about')
+      find_link('history').visible?
+      find_link('history').click
+      expect(current_path).to eq('/welcome/about')
+      find_link('otakon-go').visible?
+      find_link('otakon-go').click
+      expect(current_path).to eq('/welcome/about')
+      find_link('private-policy').visible?
+      find_link('private-policy').click
+      expect(current_path).to eq('/welcome/about')
     end
   end
 

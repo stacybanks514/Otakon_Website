@@ -15,11 +15,11 @@
 
   <body>
     <!-- nav bar begins -->
-    <div class="fixed">
+    <div class="fixed" id="top-nav-bar">
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
     <ul class="title-area">
       <li class="name" id="otakon">
-      <h1><a href="#">Otakon</a></h1>
+      <h1><a href="#"><%= link_to 'Otakon', root_path %></a></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -30,55 +30,55 @@
       <ul class="left">
         <li class="divider"></li>
         <li class="has-dropdown">
-          <a href="#">About</a>
+          <a href="/welcome/about">About</a> 
           <ul class="dropdown">
-            <li><a href="#">Mission Statement</a></li>
-            <li><a href="#">Mascots</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Downloads</a></li>
-            <li><a href="#">Otakon on the Go!</a></li>
-            <li><a href="#">Private Policy</a></li>
+            <li><a href="/welcome/about" id="mission">Mission Statement</a></li>
+            <li><a href="/welcome/about" id="mascots">Mascots</a></li>
+            <li><a href="/welcome/about" id="history">History</a></li>
+            <li><a href="/welcome/about" id="downloads">Downloads</a></li>
+            <li><a href="/welcome/about" id="otakon-go">Otakon on the Go!</a></li>
+            <li><a href="/welcome/about" id="private-policy">Private Policy</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
-          <a href="#">Directions</a>
+          <a href="/welcome/directions">Directions</a>
           <ul class="dropdown">
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Hotels</a></li>
+            <li><a href="/welcome/directions">Location</a></li>
+            <li><a href="/welcome/directions">Hotels</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
-          <a href="#">Convention Info</a>
+          <a href="/welcome/convention_info">Convention Info</a>
           <ul class="dropdown">
-            <li><a href="#">Tickets</a></li>
-            <li><a href="#">Hours of Operation</a></li>
-            <li><a href="#">Guest</a></li>
-            <li><a href="#">Convention Policies</a></li>
-            <li><a href="#">Special Needs</a></li>
-            <li><a href="#">Newbies guide</a></li>
-            <li><a href="#">Virtual Info Desk</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="/welcome/convention_info">Tickets</a></li>
+            <li><a href="/welcome/convention_info">Hours of Operation</a></li>
+            <li><a href="/welcome/convention_info">Guest</a></li>
+            <li><a href="/welcome/convention_info">Convention Policies</a></li>
+            <li><a href="/welcome/convention_info">Special Needs</a></li>
+            <li><a href="/welcome/convention_info">Newbies guide</a></li>
+            <li><a href="/welcome/convention_info">Virtual Info Desk</a></li>
+            <li><a href="/welcome/convention_info">Lost and Found</a></li>
+            <li><a href="/welcome/convention_info">Help</a></li>
           </ul>
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
-          <a href="#">Community</a>
+          <a href="/welcome/community">Community</a>
           <ul class="dropdown">
-            <li><a href="#">Clubs</a></li>
-            <li><a href="#">Bulletin Board</a></li>
-            <li><a href="#">Cosplay Coordination</a></li>
-            <li><a href="#">Fan Art Showcase</a></li>
-            <li><a href="#">Fan reports and pictures</a></li>
-            <li><a href="#">Social Media</a></li>
+            <li><a href="/welcome/community">Clubs</a></li>
+            <li><a href="/welcome/community">Bulletin Board</a></li>
+            <li><a href="/welcome/community">Cosplay Coordination</a></li>
+            <li><a href="/welcome/community">Fan Art Showcase</a></li>
+            <li><a href="/welcome/community">Fan reports and pictures</a></li>
+            <li><a href="/welcome/community">Social Media</a></li>
           </ul>
         </li>
         <li class="divider"></li>
-        <li><a href="#">Join Our Team!</a></li>
+        <li><a href="/welcome/join">Join Our Team!</a></li>
         <li class="divider"></li>
-        <li><a href="#">Otakon Vegas</a></li>
+        <li><a href="http://www.otakonvegas.com/default.asp">Otakon Vegas</a></li>
         <li class="divider"></li>
       </ul>
       <!-- Right Nav Section -->
@@ -118,7 +118,7 @@
           <ul class="left">
             <li><a href="#">Copyrights to Otakon</a></li>
             <li class="divider"></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/welcome/contact">Contact</a></li>
             <li class="divider"></li>
           </ul>
 
