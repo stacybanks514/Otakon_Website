@@ -97,7 +97,7 @@ describe "About Page" do
 
     it "user should see mission statement" do
     visit '/welcome/about'
-    expect(page).to have_css('p', text: 'mission')
+    expect(page).to have_css('p', text: 'fans')
   end
 
 end

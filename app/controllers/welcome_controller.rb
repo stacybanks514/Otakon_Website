@@ -1,3 +1,4 @@
+require 'pry'
 class WelcomeController < ApplicationController
   
   def index
@@ -8,6 +9,7 @@ class WelcomeController < ApplicationController
   end
 
   def directions
+    @url = "https://www.google.com/maps/embed/v1/place?key=#{ENV['google_api']}&q=Baltimore+Convention+Center,Baltimore+MD"
   end
 
   def convention_info
