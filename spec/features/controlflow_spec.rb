@@ -12,7 +12,7 @@ describe "Managing Control Flow" do
     expect(page).to have_content 'Otakon'
   end
 
-  it "user can see articles" do
+  it "user can see lastest news" do
     visit '/'
     within ('#articles') do
       expect(page).to have_css('th', text: 'Title')
@@ -60,6 +60,13 @@ describe "Managing Control Flow" do
       find_link('tumblr').visible?
       find_link('foursquare').visible?
       # expect(current_path).not_to eq('/')
+    end
+  end
+
+  it "user can see picture slider" do
+    visit '/'
+    within ('.example-orbit') do
+      find_image('otakon-cooking.png').visible?
     end
   end
 

@@ -1,29 +1,71 @@
+<div class="container">
+  <!-- Begin picture slide -->
+  <div class="row">
+    <div class="small-12 large-centered columns">
+      <ul class="example-orbit" data-orbit>
+        <li>
+          <%= image_tag "otakon-cooking.png" %>
+          <div class="orbit-caption">
+            Otakon 2012.
+          </div>
+        </li>
+        <li class="active">
+          <%= image_tag "otakonvegas.jpg" %>
+          <div class="orbit-caption">
+            Otakon Vegas.
+          </div>
+        </li>
+        <li>
+          <%= image_tag "cosplayers.jpg" %>
+          <div class="orbit-caption">
+            Cosplayers.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End picture slide -->
 
-<h1>Otakon</h1>
-<p>I AM THE ROOT PAGE!</p>
-
-<table id="articles">
-  <thead>
-    <tr>
-      <th colspan="1">Title</th>
-      <th colspan="1">Body</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <% if admin_signed_in? %>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%end%>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<% if admin_signed_in? %>
-    <%= link_to 'New Article', new_article_path %>
-<%end%>
+  <!-- Begin latest news and announcements -->
+  <div class="row">
+    <div class="small-12 large-centered columns">
+      <div class="large-6 columns" id="latest-news">
+        <table id="articles">
+         <h3>Lastest News!</h3>
+          <thead>
+            <tr>
+              <th colspan="1" width="150">Title</th>
+              <th colspan="1" width="300">Body</th>
+            </tr>
+          </thead>
+        <tbody>
+          <% @articles.each do |article| %>
+            <tr>
+              <td><%= article.title %></td>
+              <td><%= article.text %></td>
+              <% if admin_signed_in? %>
+              <td><%= link_to 'Show', article %></td>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <%end%>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% if admin_signed_in? %>
+          <%= link_to 'New Article', new_article_path %>
+      <%end%>
+      </div><!-- end large-6 columns -->
+      <div class="large-6 columns" id="other-news">
+        <div class="small-12 large-centered columns" height="100">
+          <h3>Guest!</h3>
+          <%= image_tag "smallbanner.png" %> 
+        </div>
+        <div class="small-12 large-centered columns" height="100">
+          <h3>Recap of 2014!</h3>
+        </div>
+      </div><!-- end large-6 columns -->
+    </div><!-- End small-11 small-centered columns -->
+  </div> <!-- End row -->
+  <!-- end latest news and announcements -->
+</div> <!-- End container -->
