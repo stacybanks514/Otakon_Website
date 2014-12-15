@@ -1,1 +1,26 @@
-<h1> Directions </h1>
+<div class="container">
+  <div class="row">
+
+    <div class="small-3 columns">
+      <h1>Directions</h1>
+      <p>Otakon is held every year at the Baltimore Convention Center in Baltimore Maryland.</p>
+      <br>
+      <p>Use Google maps to help you find the best route to joining us next year!</p>
+    </div><!-- end div small-3 columns -->
+
+    <div class="small-9 columns">
+      <!-- Google Maps API -->
+        <iframe
+          width="600"
+          height="450"
+          frameborder="0" style="border:0" 
+          src="<%=@url%>">
+        </iframe>
+    </div><!-- end div small-9 columns -->
+
+  </div><!-- end div row -->
+</div><!-- end div container -->
+
+<!-- my_key = ENV["goodreads_api"]
+book_url = "https://www.goodreads.com/search.xml?key=#{my_key}&q=#{safe_title}"
+ -->

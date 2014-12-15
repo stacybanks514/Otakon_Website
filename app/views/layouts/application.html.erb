@@ -8,7 +8,6 @@
     <title>Otakon</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
@@ -110,8 +109,8 @@
     <%= yield %>
 
     <!-- bottom nav bar begins -->
-    <div id="footer">
-      <nav class="top-bar" data-topbar role="navigation">
+    <div id="footer" >
+      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large" >
 
         <section class="top-bar-section">
           <!-- Left Nav Section -->
