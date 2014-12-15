@@ -63,11 +63,41 @@ describe "Managing Control Flow" do
     end
   end
 
-  it "user can see picture slider" do
-    visit '/'
-    within ('.example-orbit') do
-      find_image('otakon-cooking.png').visible?
-    end
+  # it "user can see picture slider" do
+  #   visit '/'
+  #   within ('.example-orbit') do
+  #     find_image('otakon-cooking.png').visible?
+  #   end
+  # end
+
+end
+
+
+describe "Directions Page" do
+
+  it "user should see Directions page" do
+    visit '/welcome/directions'
+    expect(page).to have_content 'Directions'
+  end
+
+  it "user should see google maps" do
+    visit '/welcome/directions'
+    expect(page).to have_css('iframe')
+  end
+
+end
+
+
+describe "About Page" do
+
+  it "user should see About page" do
+    visit '/welcome/about'
+    expect(page).to have_content 'About'
+  end
+
+    it "user should see mission statement" do
+    visit '/welcome/about'
+    expect(page).to have_css('p', text: 'mission')
   end
 
 end
