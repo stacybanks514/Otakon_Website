@@ -40,6 +40,65 @@ th {
   background-color: #6699FF;
 }
 
-.mascots {
-  max-height: 250px;
+.mascot-hiroko {
+  max-height: 320px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mascot-hiroshi{
+  max-height: 320px;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-bar {
+  background-color: #0079C6;
+  color: white;
+  padding-left: 30px;
+}
+
+.directions-bar {
+  background-color: #0079C6;
+  color: white;
+  padding-left: 10px;
+}
+
+.about-p {
+  padding: 30px;
+  background-color: #F8F8F8;
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+h4 {
+  background-color: #F8F8F8;
+  padding-left:30px;
+  padding-top: 20px;
+}
+
+#bg-div {
+  background-color: #F8F8F8;
+}
+
+.directions-side-p{
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.directions-p {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+#headline {
+  text-align: center;
+  font-size: 70pt;
+}
+
+#headline-convoinfo {
+  text-align: center;
+  font-size: 50pt;
 }
