@@ -61,7 +61,6 @@ th {
 }
 
 .about-p {
-  font-family: verdana;
   padding: 30px;
   background-color: #F8F8F8;
   font-size: 14pt;
@@ -71,8 +70,19 @@ th {
 h4 {
   background-color: #F8F8F8;
   padding-left:30px;
+  padding-top: 20px;
 }
 
 #mascot-div {
   background-color: #F8F8F8;
+}
+
+.directions-side-p{
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.directions-p {
+  font-size: 12pt;
+  line-height: 1.5;
 }
