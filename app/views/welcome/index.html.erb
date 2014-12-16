@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="container-bg">
   <!-- Begin picture slide -->
   <div class="row">
     <div class="small-12 large-centered columns">
@@ -29,9 +29,9 @@
   <!-- Begin latest news and announcements -->
   <div class="row">
     <div class="small-12 large-centered columns">
-      <div class="large-6 columns" id="latest-news">
+      <div class="large-8 columns" id="latest-news">
         <table id="articles">
-         <h3>Lastest News!</h3>
+         <h3>Lastest News!</h3> 
           <thead>
             <tr>
               <th colspan="1" width="150">Title</th>
@@ -55,17 +55,22 @@
       <% if admin_signed_in? %>
           <%= link_to 'New Article', new_article_path %>
       <%end%>
+      <h5><%= link_to 'See all articles', articles_path %></h5>
       </div><!-- end large-6 columns -->
-      <div class="large-6 columns" id="other-news">
+      <div class="large-4 columns" id="other-news">
         <div class="small-12 large-centered columns" height="100">
-          <h3>Guest!</h3>
+          <p class="index-p">Otakon Guest!</p>
           <%= image_tag "smallbanner.png" %> 
         </div>
         <div class="small-12 large-centered columns" height="100">
-          <h3>Recap of 2014!</h3>
+          <p class="index-p">Recap of 2014!</p>
+          <%= image_tag "smallbanner.png" %>
         </div>
+        <br>
       </div><!-- end large-6 columns -->
     </div><!-- End small-11 small-centered columns -->
   </div> <!-- End row -->
+  <br>
+  <br>
   <!-- end latest news and announcements -->
 </div> <!-- End container -->

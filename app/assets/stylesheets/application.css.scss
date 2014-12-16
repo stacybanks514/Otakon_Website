@@ -16,6 +16,10 @@
  */
 
 @import 'foundation-icons';
+#container-bg {
+
+} // Onbindex.html.erb
+
 #otakon {
   background-color: #0079C6;
 }
@@ -23,13 +27,21 @@
 #top {
   text-align: center;
 }
+#loggedin {
+  color: white;
+}
+
+.index-p{
+  font-size: 16pt;
+  padding-top: 20px;
+}
 
 #latest-news {
   background-color: #F8F8F8;
 }
 
 #other-news {
-  background-color: #D0D0D0 ;
+  background-color: #F8F8F8 ;
 }
 
 .example-orbit {

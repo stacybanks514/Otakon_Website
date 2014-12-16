@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!
+  
   respond_to :html
 
   def index
@@ -13,14 +13,17 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    
     @article = Article.new
     respond_with(@article)
   end
 
   def edit
+    before_action :authenticate_admin!
   end
 
   def create
+    
     # @article = Article.new(article_params)
     # @article.save
     # respond_with(@article)
@@ -38,11 +41,13 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    
     @article.update(article_params)
     respond_with(@article)
   end
 
   def destroy
+
     @article.destroy
     respond_with(@article)
   end

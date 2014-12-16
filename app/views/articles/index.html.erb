@@ -1,26 +1,34 @@
-<h1>Listing articles</h1>
+<div class="container" >
+  <div class="row" >
+    <div class="large-12 columns" >
+      <h1 id="headline"> Articles <%= image_tag "artistalley_hiroshi.gif", :class => 'mascot-hiroko'%></h1>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="1">Title</th>
+            <th colspan="1">Body</th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @articles.each do |article| %>
+            <tr>
+              <td><%= article.title %></td>
+              <td><%= article.text %></td>
+              <% if admin_signed_in? %>
+              <td><%= link_to 'Show', article %></td>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div> <!-- end div large 12 columns -->
+  </div> <!-- end div row -->
+</div> <!-- end div container -->
 
 <br>
-
+<% if admin_signed_in? %>
 <%= link_to 'New Article', new_article_path %>
-<%= link_to 'Home', root_path %>
+<% end %>
