@@ -40,13 +40,18 @@ th {
   background-color: #6699FF;
 }
 
-.mascots {
-  max-height: 300px;
-  max-width: 200px;
+.mascot-hiroko {
+  max-height: 320px;
+  max-width: 280px;
   margin: 0 auto;
   padding: 20px;
+}
 
-
+.mascot-hiroshi{
+  max-height: 320px;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .about-bar {
@@ -57,15 +62,17 @@ th {
 
 .about-p {
   font-family: verdana;
-  padding-bottom: 50px;
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-top: 40px;
+  padding: 30px;
   background-color: #F8F8F8;
   font-size: 14pt;
   line-height: 1.5;
 }
 
-.mascot-area {
+h4 {
+  background-color: #F8F8F8;
+  padding-left:30px;
+}
+
+#mascot-div {
   background-color: #F8F8F8;
 }
