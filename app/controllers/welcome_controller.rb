@@ -2,7 +2,7 @@
 class WelcomeController < ApplicationController
   
   def index
-    @articles = Article.all
+    @articles = Article.most_recent
   end
 
   def about
