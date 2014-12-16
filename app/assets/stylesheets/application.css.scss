@@ -41,9 +41,31 @@ th {
 }
 
 .mascots {
-  max-height: 250px;
+  max-height: 300px;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+
+
 }
 
-#about-bar {
-  background-color: red;
+.about-bar {
+  background-color: #0079C6;
+  color: white;
+  padding-left: 30px;
+}
+
+.about-p {
+  font-family: verdana;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 40px;
+  background-color: #F8F8F8;
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+.mascot-area {
+  background-color: #F8F8F8;
 }

@@ -9,10 +9,10 @@ Below, I have outlined the user stories, wireframes, technologies used, and othe
 <br>
 ###User Stories
 User Will be able to:
-* go to root page, view side scrolling announcements, lastest news link, 2015 badge poll link, bulletin board/2014 recap
-* view top and bottom navigation bar at all times
-* use a fully functional top and bottom navigation bar
+* go to root page, view side scrolling announcements, view lastest news, and 2014 recap
+* view and use a fully functional top and bottom navigation bar
 * click social media links and be sent to appropriate social media websites for Otakon
+* use google maps to get directions to the Baltimore Convention Center
 <br>
 
 ###Wireframes
@@ -26,4 +26,6 @@ Coming Soon
 * Capybara and RSPEC
 * Foundation-rails 5
 * Foundation Fonts
-* more to be announced!
+* Figaro
+* Devise
+* Rails_12factor
