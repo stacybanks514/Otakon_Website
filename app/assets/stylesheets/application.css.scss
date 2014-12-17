@@ -60,9 +60,9 @@
 body, html {
   min-height: 100%;
   min-width: 100%;
-  background-image: url(gray_canvas_seamless.jpg);
+  // background-image: url(gray_canvas_seamless.jpg);
   // background-image: url(light_gray_bricks_pattern.gif);
-  // background-image: url(swirl_pattern.png);
+  background-image: url(swirl_pattern.png);
   // background-image: url(White-wall-Seamless-Pattern-For-Website-Background.jpg);
 
 }
@@ -127,10 +127,12 @@ h4 {
 
 #headline {
   text-align: center;
-  font-size: 70pt;
+  font-size: 70pt; 
+  font-weight: 500; 
 }
 
 #headline-convoinfo {
   text-align: center;
   font-size: 50pt;
+  font-weight: 500;
 }
