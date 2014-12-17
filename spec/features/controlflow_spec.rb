@@ -1,11 +1,30 @@
 require 'rails_helper'
 
+def navbar_about_test(x)
+  find_link(x).visible?
+  find_link(x).click
+  expect(current_path).to eq("/welcome/about")
+end
+
+def navbar_directions_info_test(x)
+  find_link(x).visible?
+  find_link(x).click
+  expect(current_path).to eq("/welcome/directions")
+end
+
+def navbar_convention_info_test(x)
+  find_link(x).visible?
+  find_link(x).click
+  expect(current_path).to eq("/welcome/convention_info")
+end
+
+def navbar_community_test(x)
+  find_link(x).visible?
+  find_link(x).click
+  expect(current_path).to eq("/welcome/community")
+end
+
 describe "Root Page" do
-  # def click_test(x)
-  #   find_link('x').visible?
-  #   find_link('x').click
-  #   expect(current_path).to eq('/x/about')
-  # end
 
   it "user visits root page" do
     visit '/'
@@ -20,24 +39,56 @@ describe "Root Page" do
     end
   end
 
-  it "HELP - user clicks on options in nav bar and is lead to appropriate page" do
+  it "user clicks on options in About option in nav bar and is lead to appropriate page" do
     visit '/'
     within ('#top-nav-bar') do
-      find_link('mission').visible?
-      find_link('mission').click
-      expect(current_path).to eq('/welcome/about')
-      find_link('mascots').visible?
-      find_link('mascots').click
-      expect(current_path).to eq('/welcome/about')
-      find_link('history').visible?
-      find_link('history').click
-      expect(current_path).to eq('/welcome/about')
-      find_link('otakon-go').visible?
-      find_link('otakon-go').click
-      expect(current_path).to eq('/welcome/about')
-      find_link('private-policy').visible?
-      find_link('private-policy').click
-      expect(current_path).to eq('/welcome/about')
+      navbar_about_test('mission')
+      navbar_about_test('mascots')
+      navbar_about_test('history')
+      navbar_about_test('otakon-go')
+      navbar_about_test('private-policy')
+    end
+  end
+
+  it "user clicks on options in Directions option in nav bar and is lead to appropriate page" do
+    visit '/'
+    within ('#top-nav-bar') do
+      navbar_directions_info_test('location')
+      navbar_directions_info_test('hotels')
+    end
+  end
+
+  it "user clicks on options in convention_info option in nav bar and is lead to appropriate page" do
+    visit '/'
+    within ('#top-nav-bar') do
+      navbar_convention_info_test('tickets')
+      navbar_convention_info_test('hours')
+      navbar_convention_info_test('guest')
+      navbar_convention_info_test('info')
+      navbar_convention_info_test('special-needs')
+      navbar_convention_info_test('newbies')
+      navbar_convention_info_test('info-desk')
+      navbar_convention_info_test('lost')
+      navbar_convention_info_test('help')
+    end
+  end
+
+  it "Community buttion in Nav bar - user clicks on options in Community option in nav bar and is lead to appropriate page" do
+    visit '/'
+    within ('#top-nav-bar') do
+      navbar_community_test('clubs')
+      navbar_community_test('bulletin')
+      navbar_community_test('cosplay')
+      navbar_community_test('fan-art')
+      navbar_community_test('fan-reports')
+      navbar_community_test('social-media')
+    end
+  end
+
+  it "user can see social links on footer" do
+    visit '/'
+    within ('#footer') do
+      expect(page).to have_css('li')
     end
   end
 
@@ -116,8 +167,8 @@ end
 describe "Convention Page" do
 
   it "user should see convention page headlines" do
-    visit '/welcome/about'
-    # expect(page).to have_css('h1', text: 'Convention Information')
+    visit '/welcome/convention_info'
+    expect(page).to have_css('h1', text: 'Convention Information')
     expect(page).to have_content 'Tickets'
     expect(page).to have_content 'Hours of Operation'
     page.has_selector?('table tr')
@@ -157,15 +208,11 @@ end
 
 describe "Admin page" do
 
-  it "Admin should be abel to log in" do
-    visit '/admins/sign_in'
+  it "Admin should be able to log in" do
+    visit new_admin_session_path
     expect(page).to have_css('h2', text: 'Administration Log in')
-    within ('#field1') do
-      fill_in 'email', :with => 'stacy@stacy.com'
-    end
-    within ('#field2') do
-      fill_in 'password', :with => '1234567890'
-    end
+      fill_in 'admin_email', :with => 'stacy@stacy.com'
+      fill_in 'admin_password', :with => '1234567890'
   end
 
 end
