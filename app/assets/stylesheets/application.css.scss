@@ -37,15 +37,13 @@
 }
 
 #latest-news {
-  background-color: #F8F8F8;
-}
-
-#other-news {
-  background-color: #F8F8F8 ;
+  // background-color: #F8F8F8;
+  background-color: #FFFFFF;
 }
 
 .example-orbit {
-  background-color: #F8F8F8;
+  // background-color: #F8F8F8;
+  background-color: #FFFFFF;
 }
 
 #footer {
@@ -60,7 +58,24 @@
 body, html {
   min-height: 100%;
   min-width: 100%;
+  // background-color: #CFDCFF;
+  // background-image: url(gray_canvas_seamless.jpg);
+  // background-image: url(light_gray_bricks_pattern.gif);
+  // background-image: url(swirl_pattern.png);
+  // background-image: url(White-wall-Seamless-Pattern-For-Website-Background.jpg);
+    background: #c8d5ff; /* Old browsers */
+  background: -moz-linear-gradient(top, #c8d5ff 0%, #ededed 48%, #f9f9f9 65%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8d5ff), color-stop(48%,#ededed), color-stop(65%,#f9f9f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #c8d5ff 0%,#ededed 48%,#f9f9f9 65%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #c8d5ff 0%,#ededed 48%,#f9f9f9 65%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #c8d5ff 0%,#ededed 48%,#f9f9f9 65%); /* IE10+ */
+  background: linear-gradient(to bottom, #c8d5ff 0%,#ededed 48%,#f9f9f9 65%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8d5ff', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F9F9F9;
 }
+
 th {
   background-color: #6699FF;
 }
@@ -93,19 +108,20 @@ th {
 
 .about-p {
   padding: 30px;
-  background-color: #F8F8F8;
+  // background-color: #F8F8F8;
+  background-color: #FFFFFF;
   font-size: 12pt;
   line-height: 1.5;
 }
 
 h4 {
-  background-color: #F8F8F8;
+  background-color: #FFFFFF;
   padding-left:30px;
   padding-top: 20px;
 }
 
 #bg-div {
-  background-color: #F8F8F8;
+  background-color: #FFFFFF;
 }
 
 .directions-side-p{
@@ -122,10 +138,13 @@ h4 {
 
 #headline {
   text-align: center;
-  font-size: 70pt;
+  font-size: 70pt; 
+  font-weight: 500;
+  color: #2E2E2F; 
 }
 
 #headline-convoinfo {
   text-align: center;
   font-size: 50pt;
+  font-weight: 500;
 }
