@@ -1,6 +1,7 @@
 #Otakon
-##Otakon! An anime convention for fans by fans! 
-https://stormy-fjord-2951.herokuapp.com/
+##Otakon! An anime convention for fans by fans!
+Original Website: https://www.otakon.com/default.asp <br>
+Redesigned Website: https://stormy-fjord-2951.herokuapp.com/ <br>
 <br>
 ###Overview <br>
 I've been workin at Otakon for over 7 years. And now that I have been studying web development, it is my hope that I can recreate the Otakon website for better user experience of our Con-goers and Staff. 
@@ -22,6 +23,7 @@ Coming Soon
 ###Technologies
 * Ruby 2.1.2
 * Rails 4.1.6
+* Google Maps API
 * PostgreSQL Database
 * Capybara and RSPEC
 * Foundation-rails 5
