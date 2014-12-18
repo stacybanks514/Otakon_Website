@@ -1,5 +1,5 @@
 #Otakon
-##Otakon! An anime convention for fans by fans!
+##An anime convention for fans by fans!
 Original Website: https://www.otakon.com/default.asp <br>
 Redesigned Website: https://stormy-fjord-2951.herokuapp.com/ <br>
 <br>
@@ -9,7 +9,7 @@ I've been workin at Otakon for over 7 years. And now that I have been studying w
 Below, I have outlined the user stories, wireframes, technologies used, and other information pertaining to this website.
 <br>
 ###User Stories
-User Will be able to:
+User will be able to:
 * go to root page, view side scrolling announcements, view lastest news, and 2014 recap
 * view and use a fully functional top and bottom navigation bar
 * click social media links and be sent to appropriate social media websites for Otakon
