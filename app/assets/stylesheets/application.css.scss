@@ -34,6 +34,7 @@
 .index-p{
   font-size: 16pt;
   padding-top: 20px;
+  font-family: 'Raleway', serif;
 }
 
 #latest-news {
@@ -63,7 +64,7 @@ body, html {
   // background-image: url(light_gray_bricks_pattern.gif);
   // background-image: url(swirl_pattern.png);
   // background-image: url(White-wall-Seamless-Pattern-For-Website-Background.jpg);
-    background: #c8d5ff; /* Old browsers */
+  background: #c8d5ff; /* Old browsers */
   background: -moz-linear-gradient(top, #c8d5ff 0%, #ededed 48%, #f9f9f9 65%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8d5ff), color-stop(48%,#ededed), color-stop(65%,#f9f9f9)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #c8d5ff 0%,#ededed 48%,#f9f9f9 65%); /* Chrome10+,Safari5.1+ */
@@ -76,8 +77,19 @@ body, html {
   background-color: #F9F9F9;
 }
 
+p {
+font-family: 'Raleway', serif;
+font-weight: 400;
+font-size: 16pt;
+}
+
 th {
   background-color: #6699FF;
+  font-family: 'Raleway', serif;
+}
+
+td {
+  font-family: 'Raleway', serif;
 }
 
 .mascot-hiroko {
@@ -114,10 +126,23 @@ th {
   line-height: 1.5;
 }
 
+h1 {
+  font-family: 'Raleway', serif;
+}
+
+h2 {
+  font-family: 'Raleway', serif;
+}
+
 h4 {
   background-color: #FFFFFF;
   padding-left:30px;
   padding-top: 20px;
+  font-family: 'Raleway', serif;
+}
+
+h3 {
+  font-family: 'Raleway', serif;
 }
 
 #bg-div {
