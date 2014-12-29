@@ -4,7 +4,7 @@ Original Website: https://www.otakon.com/default.asp <br>
 Redesigned Website: https://stormy-fjord-2951.herokuapp.com/ <br>
 <br>
 ###Overview <br>
-I've been workin at Otakon for over 7 years. And now that I have been studying web development, it is my hope that I can recreate the Otakon website for better user experience of our Con-goers and Staff. 
+I've been working at Otakon for over 7 years. And now that I have been studying web development, it is my hope that I can recreate the Otakon website for better user experience of our Con-goers and Staff. 
 <br>
 Below, I have outlined the user stories, wireframes, technologies used, and other information pertaining to this website.
 <br>
